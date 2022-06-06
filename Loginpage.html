@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(94, 135, 188);
+        }
+
+        #container {
+            width: 20%;
+            height: 400px;
+            border: 2px solid black;
+            margin: auto;
+            justify-content: center;
+            text-align: center;
+            margin-top: 100px;
+            background-color: white;
+        }
+
+        #name {
+            margin-top: 50px;
+            width: 250px;
+            height: 30px;
+            /* text-align: center; */
+            font-size: 20px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+        }
+
+        #pass {
+            margin-top: 30px;
+            width: 250px;
+            height: 30px;
+            /* text-align: center; */
+            font-size: 20px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+        }
+
+        button {
+            width: 250px;
+            height: 30px;
+            margin-top: 20px;
+            background-color: blueviolet;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        p {
+            cursor: pointer;
+        }
+
+        @media only screen and (min-width: 500px) and (max-width: 768px) {
+            #container {
+                width: 60%;
+                height: 700px;
+                border: 2px solid black;
+                margin: auto;
+                justify-content: center;
+                text-align: center;
+                margin-top: 100px;
+                background-color: white;
+
+            }
+
+            h1 {
+                font-size: 60px;
+            }
+
+            #name {
+                margin-top: 50px;
+                width: 350px;
+                height: 30px;
+                /* text-align: center; */
+                font-size: 20px;
+                border-top: 0px;
+                border-left: 0px;
+                border-right: 0px;
+                font-size: 25px;
+                cursor: pointer;
+            }
+
+            #pass {
+                margin-top: 50px;
+                width: 350px;
+                height: 30px;
+                /* text-align: center; */
+                font-size: 25px;
+                border-top: 0px;
+                border-left: 0px;
+                border-right: 0px;
+
+                cursor: pointer;
+            }
+
+            button {
+                width: 350px;
+                height: 60px;
+                margin-top: 50px;
+                background-color: blueviolet;
+                color: white;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            p {
+                font-size: 25px;
+                margin-top: 50px;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Login</h1>
+        <form>
+            <input type="text" id="name" placeholder="Email">
+            <input type="password" id="pass" placeholder="Password">
+            <br>
+            <br>
+            <button>Login</button>
+        </form>
+        <p>Forgot <a href="">Password?</a></p>
+        <p>Don't have an account? <a href="">Signup</a></p>
+
+    </div>
+</body>
+
+</html>
+<script>
+    document.querySelector("button").addEventListener("click", Myfunction)
+    function Myfunction() {
+        event.preventDefault()
+        let Name = document.querySelector("#name").value
+        let Pass = document.querySelector("#pass").value
+        console.log(Name, Pass)
+        alert("Sucessfully Login")
+    }
+</script>
